@@ -17,7 +17,7 @@ public class MainDaoTest {
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
             UserDao userDao = new UserDao(connection);
 
-            // Vytvoření uživatele Viktor Hazard s heslem "hovnokleslo"
+            // Vytvoření uživatele Viktor Hazard
             User userToAdd = new User("Viktor Hazard", "viktor.hazard@gmail.com", "hovnokleslo");
             User savedUser = userDao.create(userToAdd);
             System.out.println("Uživatel přidán s ID: " + savedUser.getId());
