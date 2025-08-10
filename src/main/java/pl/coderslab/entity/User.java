@@ -25,6 +25,7 @@ public class User {
         this.hashedPassword = hashedPassword;
     }
 
+    // Nové get/set metody podle aktuálních názvů
     public int getUserId() {
         return userId;
     }
@@ -55,5 +56,38 @@ public class User {
 
     public void setHashedPassword(String password) {
         this.hashedPassword = password;
+    }
+
+    // Alias metody pro kompatibilitu s UserDao
+    public int getId() {
+        return getUserId();
+    }
+
+    public void setId(int id) {
+        setUserId(id);
+    }
+
+    public String getUserName() {
+        return getName();
+    }
+
+    public void setUserName(String username) {
+        setName(username);
+    }
+
+    public String getEmail() {
+        return getEmailAddress();
+    }
+
+    public void setEmail(String email) {
+        setEmailAddress(email);
+    }
+
+    public String getPassword() {
+        return getHashedPassword();
+    }
+
+    public void setPassword(String password) {
+        setHashedPassword(password);
     }
 }
